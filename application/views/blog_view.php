@@ -70,7 +70,9 @@
   <!--//////////////////////форма ввода////////////////-->
 	<div class="row">
 		<div class="col-xs-10 col-sm-10 col-md-10 col-md-offset-1 margin_left">
-	
+			<?php
+				include("form_add_stories_view.php");
+			?>
 		</div>
 	</div>
 	<!--//////////////////////конец форма ввода////////////////-->

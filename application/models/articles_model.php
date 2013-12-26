@@ -18,6 +18,21 @@ class Articles_model extends CI_Model{
 			return $query->result_array();
 		}
 		
+		function add_stite_comment($table,$date)
+		{
+			$this->db->insert($table,$date);
+		}
+		
+		/*function get_row_comment($id)
+		{
+			$this->db->get('id_stories',$id);
+			$query = $this->db->get('comment');
+			echo $query->num_rows(); 
+		}*/
+		
+		
+		
+		
 		
 }
 ?>

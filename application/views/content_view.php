@@ -4,7 +4,7 @@
 	<div class="panel-heading">
 		<h4 class="panel-title">
 			<a class="accordion-toggle bold_hover" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo($item['id']); ?>">
-				<Span class="tema"><?php echo($item['title']);?></span> <span class="author"><?php echo($item['author']); ?></span> <Span class="tema"> <?php  ?></span>
+				<Span class="tema"><?php echo($item['title']);?></span> <span class="author"><?php echo($item['author']); ?></span> <Span class="tema"> <?php //echo($this->articles_model->get_row_comment($item['id'])); ?></span>
 			</a>
 		</h4>
 	</div>
