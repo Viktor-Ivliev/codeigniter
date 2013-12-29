@@ -5,7 +5,7 @@ body {
 	
 	overflow-x:  hidden;
 }
-/*шапка header*/
+/*С€Р°РїРєР° header*/
 .blue_background_and_height_90{
 	background: linear-gradient(to top, #7b87c5, #0a2085);
 }
@@ -32,9 +32,9 @@ body {
 	color: #3edf32;
 	background: linear-gradient(to top, #8c98d6, #080053);
 }
-/*конец шапка header*/
+/*РєРѕРЅРµС† С€Р°РїРєР° header*/
 
-/*контент*/
+/*РєРѕРЅС‚РµРЅС‚*/
 .tema{
 	color: #243ba3;
 }
@@ -94,9 +94,9 @@ body {
 	display: none;
 }*/
 
-/*контент конец*/
+/*РєРѕРЅС‚РµРЅС‚ РєРѕРЅРµС†*/
 
-/*форма добовления статей*/
+/*С„РѕСЂРјР° РґРѕР±РѕРІР»РµРЅРёСЏ СЃС‚Р°С‚РµР№*/
 .form_size{
 	margin-left: 9.5555%;
 	padding-right:40px;
@@ -121,6 +121,11 @@ body {
    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 25px rgba(255, 0, 0, 1.7);
 }
 
+.error_yellow{
+	color:#f0f000 !important; 
+	
+}
+
 .margin_left{
 	margin-left: 8.11%;
 	padding-right: 10px;
@@ -142,4 +147,14 @@ body {
 	display: none;
 }
 
-/*конец форма добовления статей*/
+.update_form{
+	margin-top: 55px;
+}
+
+.update_title{
+	color: #fff;
+}
+.without_margin_top_bottom{
+	margin: 0px;
+}
+/*РєРѕРЅРµС† С„РѕСЂРјР° РґРѕР±РѕРІР»РµРЅРёСЏ СЃС‚Р°С‚РµР№*/
