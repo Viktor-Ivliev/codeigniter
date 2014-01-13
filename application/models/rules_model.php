@@ -70,9 +70,7 @@ class Rules_model extends CI_Model
                'label' => 'Статья:*',
                'rules' => 'required|xss_clean|prep_for_form',
           )
-
      );
-
 }
 
 ?>

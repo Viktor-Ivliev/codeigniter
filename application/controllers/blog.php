@@ -2,7 +2,7 @@
 
 class Blog extends CI_Controller {
 
-	function index()
+	function index($info_work_executed = 0)
 	{
 
 		if(isset($_POST['add_stories']))
@@ -13,14 +13,13 @@ class Blog extends CI_Controller {
 
 			if($check == TRUE)
 			{
-				$stories_date['title'] = $this->input->post('title');
-				$stories_date['author'] = $this->input->post('author');
-				$stories_date['body'] = $this->input->post('body');
-
 				$this->load->model('add_dr_stories_comment_model');
+				$stories_date['title'] = $this->add_dr_stories_comment_model->ClearData($this->input->post('title'));
+				$stories_date['author'] =$this->add_dr_stories_comment_model->ClearData($this->input->post('author'));
+				$stories_date['body'] = $this->add_dr_stories_comment_model->ClearData($this->input->post('body'));
+				
 				$this->add_dr_stories_comment_model->add_stories($stories_date);
-
-				redirect(base_url().'index.php/blog');
+				redirect(base_url().'index.php/blog/index/1#');
  
 			}
 		}
@@ -34,22 +33,22 @@ class Blog extends CI_Controller {
 
 			if($check_comment == TRUE)
 			{	
-				$comment_date['id_stories'] = $this->input->post('id_stories');
-				$comment_date['author'] = $this->input->post('author_comment');
-				$comment_date['body'] = $this->input->post('body_comment');
 
 				$this->load->model('add_dr_stories_comment_model');
+				$comment_date['id_stories'] =  $this->add_dr_stories_comment_model->ClearData($this->input->post('id_stories'));
+				$comment_date['author'] =  $this->add_dr_stories_comment_model->ClearData($this->input->post('author_comment'));
+				$comment_date['body'] = $this->add_dr_stories_comment_model->ClearData($this->input->post('body_comment'));
+
 				$this->add_dr_stories_comment_model->add_comment($comment_date);
 
-				redirect(base_url().'index.php/blog');
+				redirect(base_url().'index.php/blog/index/2#');
 			}
 		}
 
-
+			$this->load->library('template');
 			$date['stories'] = $this->data_extraction_model->get_stories();
-			$date['comment'] = $this->data_extraction_model->get_comment();
-			$this->load->library('template'); 
-			$this->template->page_view($date);
+			$date['comment'] = $this->data_extraction_model->get_comment(); 
+			$this->template->page_view($date,$info_work_executed);
 		
 	}
 		

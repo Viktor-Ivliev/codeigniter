@@ -31,6 +31,17 @@ class Add_dr_stories_comment_model extends CI_Model
 			$this->db->delete('feature_stories');
 	}
 
+	function ClearData($data, $type="s"){
+		switch($type)
+		{
+			case "s": 
+					$data = trim(strip_tags($data)); break;
+			case "i": 
+					$data = abs((int)$data); break;
+		}
+		return $data;
+	}
+
 }
 
 ?>

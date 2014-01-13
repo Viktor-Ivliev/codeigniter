@@ -3,7 +3,7 @@
 	
 		<!--форма ввода контента - конец-->	
 			<div class="Blue_form" >
-				<form class="form-horizontal form_size" role="form" action="<?php echo(base_url());?>index.php/blog_update/udate_stori" method="post" >
+				<form class="form-horizontal form_size" role="form" action="<?php echo(base_url());?>index.php/blog_update/update_stori" method="post" >
 					<div class="row">
 						<div class="col-xs-6 col-sm-6 col-md-6">
 							<div class="form-group">

@@ -13,7 +13,7 @@
 					</h4>
 				</div>
 				<div id="collapse<?php echo($item['id']); ?>" class="panel-collapse collapse <?php 
-																								if( set_value('id_stories')  === $item['id'])
+																								if( set_value('id_stories') === $item['id'])
 																								{  echo('in');}//если не правельно введен комент - то открываем запись с формой
 																							?> ">
 					<div class="panel-body">

@@ -17,7 +17,6 @@
     <link href="<?php echo(base_url());?>dist/css/blog.css" rel="stylesheet">
 
   </head>
-
   <body >
 
 

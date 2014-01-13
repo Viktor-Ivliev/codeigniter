@@ -71,6 +71,11 @@ body {
 	padding-bottom:10px;
 }
 
+.messege
+{
+	margin-top: 60px;
+	margin-bottom: -55px;
+}
 
 .comment_form_begraund{
 	background: linear-gradient(to top, #1a64df, #467fde);
