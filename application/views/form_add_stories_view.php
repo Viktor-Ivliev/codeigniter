@@ -4,7 +4,7 @@
 		<!--форма ввода контента - конец-->	
 			<div class="Blue_form" >
 				<a name="form_stories"></a>
-				<form class="form-horizontal form_size" role="form" action="<?php echo(base_url());?>index.php#form_stories" method="post" >
+				<form class="form-horizontal form_size" role="form" action="<?php echo(base_url());?>index.php/add_stories/#form_stories" method="post" >
 					<div class="row">
 						<div class="col-xs-5 col-sm-5 col-md-5">
 							<div class="form-group">

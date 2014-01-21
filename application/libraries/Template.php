@@ -2,7 +2,7 @@
 
 	class Template {
 
-		function page_view($date,$info_work_executed)
+		function page_view($date,$info_work_executed = 0)
 		{
 			$CI =& get_instance(); 
 

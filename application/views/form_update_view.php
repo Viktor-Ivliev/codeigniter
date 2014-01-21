@@ -3,16 +3,16 @@
 	
 		<!--форма ввода контента - конец-->	
 			<div class="Blue_form" >
-				<form class="form-horizontal form_size" role="form" action="<?php echo(base_url());?>index.php/blog_update/update_stori" method="post" >
+				<form class="form-horizontal form_size" role="form" action="<?php echo(base_url());?>index.php/update_stori" method="post" >
 					<div class="row">
 						<div class="col-xs-6 col-sm-6 col-md-6">
 							<div class="form-group">
-								<label class="control-label" for="inputSuccess" name="udate_title">Тема: <span class="update_title"><?php echo($stories['title']); ?><?php echo(set_value('udate_title'));?></span></label>
+								<label class="control-label" for="inputSuccess" name="udate_title">Тема: <span class="update_title"><?php echo($stories['title']); ?> <?php echo(set_value('udate_title'));?></span></label>
 							</div>
 						</div>
 						<div class="col-xs-6 col-sm-6 col-md-6">
 							<div class="form-group ">	
-								<label class="control-label" for="inputSuccess" name="udate_author">Автор: <span class="update_title"><?php echo($stories['author']); ?><?php echo(set_value('udate_author'));?></span></label>
+								<label class="control-label" for="inputSuccess" name="udate_author">Автор: <span class="update_title"><?php echo($stories['author']); ?> <?php echo(set_value('udate_author'));?></span></label>
 							</div>
 						</div>
 					</div>

@@ -25,7 +25,7 @@
 									<a class="btn btn-success min_siz" href="<?php echo(base_url());?>index.php/blog_update/index/<?php echo($item['id']); ?>"><span class="glyphicon glyphicon-pencil"></span></a>
 								</div>
 								<div class="form-group inline">
-									<a class="btn btn-success min_siz" href="<?php echo(base_url());?>index.php/blog_update/delete_stori/<?php echo($item['id']); ?>"><span class="glyphicon glyphicon-trash" ></span></a>
+									<a class="btn btn-success min_siz" href="<?php echo(base_url());?>index.php/delete_stori/index/<?php echo($item['id']); ?>"><span class="glyphicon glyphicon-trash" ></span></a>
 								</div>
 								<div class="form-group inline">
 									<a class="btn btn-success min_siz" onClick="comment<?php echo($item['id']); ?>.style.display=\'none\';"><span class="glyphicon glyphicon-chevron-up" ></span></a>
@@ -39,7 +39,7 @@
 						<div class="row">	
 							<div class="comment_form_begraund col-xs-9 col-sm-9 col-md-9 col-md-offset-1">
 								<a name="form_comment<?php  echo($item['id']); ?>"></a>
-								<form class="form-horizontal form_size form_none" role="form" method="post" action="<?php echo(base_url());?>index.php#form_comment<?php  echo($item['id']); ?>" name="comment<?php echo($item['id']); ?>" >
+								<form class="form-horizontal form_size form_none" role="form" method="post" action="<?php echo(base_url());?>index.php/add_comment/#form_comment<?php  echo($item['id']); ?>" name="comment<?php echo($item['id']); ?>" >
 									<div class="row">
 										<div class="col-xs-12 col-sm-12 col-md-12 ">
 											<div class="form-group">
