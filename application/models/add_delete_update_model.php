@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Add_dr_stories_comment_model extends CI_Model
+class Add_delete_update_model extends CI_Model
 {
 
 	function __construct()
@@ -9,6 +9,17 @@ class Add_dr_stories_comment_model extends CI_Model
        parent::__construct();
     }
 		
+    function ClearData($data, $type="s"){
+		switch($type)
+		{
+			case "s": 
+					$data = trim(strip_tags($data)); break;
+			case "i": 
+					$data = abs((int)$data); break;
+		}
+		return $data;
+	}
+
 	function add_stories($stories_date)
 	{
 			$this->db->insert('feature_stories',$stories_date);
@@ -29,17 +40,6 @@ class Add_dr_stories_comment_model extends CI_Model
 	{
 			$this->db->where('id',$id);
 			$this->db->delete('feature_stories');
-	}
-
-	function ClearData($data, $type="s"){
-		switch($type)
-		{
-			case "s": 
-					$data = trim(strip_tags($data)); break;
-			case "i": 
-					$data = abs((int)$data); break;
-		}
-		return $data;
 	}
 
 }

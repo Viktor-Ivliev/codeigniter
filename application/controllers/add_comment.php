@@ -10,12 +10,12 @@ class Add_comment extends CI_Controller {
 
 		if($check_comment == TRUE)
 		{	
-			$this->load->model('add_dr_stories_comment_model');
-			$comment_date['id_stories'] =  $this->add_dr_stories_comment_model->ClearData($this->input->post('id_stories'));
-			$comment_date['author'] =  $this->add_dr_stories_comment_model->ClearData($this->input->post('author_comment'));
-			$comment_date['body'] = $this->add_dr_stories_comment_model->ClearData($this->input->post('body_comment'));
+			$this->load->model('add_delete_update_model');
+			$comment_date['id_stories'] =  $this->add_delete_update_model->ClearData($this->input->post('id_stories'));
+			$comment_date['author'] =  $this->add_delete_update_model->ClearData($this->input->post('author_comment'));
+			$comment_date['body'] = $this->add_delete_update_model->ClearData($this->input->post('body_comment'));
 
-			$this->add_dr_stories_comment_model->add_comment($comment_date);
+			$this->add_delete_update_model->add_comment($comment_date);
 
 			redirect(base_url().'index.php/blog/index/2#');
 		} else {

@@ -11,10 +11,10 @@ class Update_stori extends CI_Controller
 		$check = $this->form_validation->run();
 		if($check == TRUE)
 		{
-				$this->load->model('add_dr_stories_comment_model');
-				$date['body'] = $this->add_dr_stories_comment_model->ClearData($this->input->post('update_body'));
+				$this->load->model('add_delete_update_model');
+				$date['body'] = $this->add_delete_update_model->ClearData($this->input->post('update_body'));
 				$id = $this->input->post('id');
-				$this->add_dr_stories_comment_model->update_stories($date,$id);
+				$this->add_delete_update_model->update_stories($date,$id);
 
 				redirect(base_url().'index.php/blog/index/3#');
 
