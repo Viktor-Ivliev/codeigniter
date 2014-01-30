@@ -9,6 +9,5 @@ class Blog extends CI_Controller {
 			$date['comment'] = $this->data_extraction_model->get_comment(); 
 			$this->template->page_view($date,$info_work_executed);	
 	}
-		
 }
 ?>

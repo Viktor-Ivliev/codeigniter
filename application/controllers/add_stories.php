@@ -11,9 +11,9 @@ class Add_stories extends CI_Controller {
 		if($check == TRUE)
 		{
 			$this->load->model('add_delete_update_model');
-			$stories_date['title'] = $this->add_delete_update_model->ClearData($this->input->post('title'));
-			$stories_date['author'] =$this->add_delete_update_model->ClearData($this->input->post('author'));
-			$stories_date['body'] = $this->add_delete_update_model->ClearData($this->input->post('body'));
+			$stories_date['title'] = $this->input->post('title');
+			$stories_date['author'] =$this->input->post('author');
+			$stories_date['body'] = $this->input->post('body');
 				
 			$this->add_delete_update_model->add_stories($stories_date);
 			redirect(base_url().'index.php/blog/index/1#');

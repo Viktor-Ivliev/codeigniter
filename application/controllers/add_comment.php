@@ -11,9 +11,9 @@ class Add_comment extends CI_Controller {
 		if($check_comment == TRUE)
 		{	
 			$this->load->model('add_delete_update_model');
-			$comment_date['id_stories'] =  $this->add_delete_update_model->ClearData($this->input->post('id_stories'));
-			$comment_date['author'] =  $this->add_delete_update_model->ClearData($this->input->post('author_comment'));
-			$comment_date['body'] = $this->add_delete_update_model->ClearData($this->input->post('body_comment'));
+			$comment_date['id_stories'] =  $this->input->post('id_stories');
+			$comment_date['author'] =  $this->input->post('author_comment');
+			$comment_date['body'] = $this->input->post('body_comment');
 
 			$this->add_delete_update_model->add_comment($comment_date);
 

@@ -12,7 +12,7 @@ class Update_stori extends CI_Controller
 		if($check == TRUE)
 		{
 				$this->load->model('add_delete_update_model');
-				$date['body'] = $this->add_delete_update_model->ClearData($this->input->post('update_body'));
+				$date['body'] = $this->input->post('update_body');
 				$id = $this->input->post('id');
 				$this->add_delete_update_model->update_stories($date,$id);
 

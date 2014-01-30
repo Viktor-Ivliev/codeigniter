@@ -9,16 +9,7 @@ class Add_delete_update_model extends CI_Model
        parent::__construct();
     }
 		
-    function ClearData($data, $type="s"){
-		switch($type)
-		{
-			case "s": 
-					$data = trim(strip_tags($data)); break;
-			case "i": 
-					$data = abs((int)$data); break;
-		}
-		return $data;
-	}
+  
 
 	function add_stories($stories_date)
 	{

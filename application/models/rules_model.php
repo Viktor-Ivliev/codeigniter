@@ -12,19 +12,19 @@ class Rules_model extends CI_Model
      	array(
      		'field' => 'title',
      		'label' => 'Тема',
-     		'rules' => 'required|xss_clean|prep_for_form',
+     		'rules' => 'required|xss_clean|prep_for_form|strip_tags|trim',
      	),
 
      	array(
      		'field' => 'author',
      		'label' => 'Автор',
-     		'rules' => 'xss_clean|prep_for_form',
+     		'rules' => 'xss_clean|prep_for_form|strip_tags|trim',
      	),
           
      	array(
      		'field' => 'body',
      		'label' => 'Статья',
-     		'rules' => 'required|xss_clean|prep_for_form',
+     		'rules' => 'required|xss_clean|prep_for_form|strip_tags|trim',
      	)
      );
 
@@ -37,13 +37,13 @@ class Rules_model extends CI_Model
           array(
                'field' => 'author_comment',
                'label' => 'Автор',
-               'rules' => 'required|xss_clean|prep_for_form',
+               'rules' => 'required|xss_clean|prep_for_form|strip_tags|trim',
           ),
           
           array(
                'field' => 'body_comment',
                'label' => 'Комментарий',
-               'rules' => 'required|xss_clean|prep_for_form',
+               'rules' => 'required|xss_clean|prep_for_form|strip_tags|trim',
           )
 
      );
@@ -68,7 +68,7 @@ class Rules_model extends CI_Model
           array(
                'field' => 'update_body',
                'label' => 'Статья:*',
-               'rules' => 'required|xss_clean|prep_for_form',
+               'rules' => 'required|xss_clean|prep_for_form|strip_tags|trim',
           )
      );
 }
